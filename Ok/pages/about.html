@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SHINAMI</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preload" href="../styles.css" as="style">
+    <style>
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 100px !important;
+                padding-bottom: 0px !important;
+            }
+            .section-header__title {
+                font-size: 36px !important;
+            }
+            .about-section {
+                padding: 5px 0 !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero {
+                padding-top: 90px !important;
+                padding-bottom: 0px !important;
+            }
+            .section-header__title {
+                font-size: 28px !important;
+            }
+            .about-section {
+                padding: 3px 0 !important;
+            }
+        }
+        .about-section {
+            padding: 5px 0;
+        }
+        .section-header {
+            margin-bottom: 0 !important;
+        }
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .about-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-text-secondary);
+            margin-bottom: 10px;
+        }
+        .about-text:first-letter {
+            font-size: 24px;
+            font-weight: 700;
+            float: left;
+            line-height: 1;
+            margin-right: 8px;
+            color: var(--color-primary);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .stat-card {
+            background: var(--color-bg-card);
+            border: 2px solid var(--color-border);
+            border-radius: 16px;
+            padding: 20px 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+        }
+        .stat-number {
+            font-size: 42px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: var(--color-text-secondary);
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 5px;
+        }
+        .team-member {
+            background: var(--color-bg-card);
+            border: 2px solid var(--color-border);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+        }
+        .team-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+        .team-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .team-role {
+            font-size: 14px;
+            color: var(--color-text-secondary);
+        }
+        @media (max-width: 1024px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .stat-number {
+                font-size: 36px;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 100px !important;
+                padding-bottom: 20px !important;
+            }
+            .section-header__title {
+                font-size: 36px !important;
+            }
+            .about-content {
+                text-align: center;
+            }
+            .about-text {
+                font-size: 15px;
+                text-align: left;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .stat-card {
+                padding: 20px 15px;
+            }
+            .stat-number {
+                font-size: 32px;
+            }
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .how-it-works__steps {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .step-card {
+                flex: 0 0 calc(50% - 15px);
+                min-width: 200px;
+            }
+        }
+        @media (max-width: 480px) {
+            .section-header__title {
+                font-size: 28px !important;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            .stat-number {
+                font-size: 28px;
+            }
+            .how-it-works__steps {
+                flex-direction: column;
+            }
+            .step-card {
+                width: 100%;
+                max-width: 100%;
+            }
+            .step-card__arrow {
+                display: none;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%238B5CF6'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-weight='bold'>S</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="../index.html" class="header__logo logo">
+                    <div class="logo__icon"></div>
+                    <span class="logo__text">SHINAMI</span>
+                </a>
+                <nav class="header__nav nav">
+                    <a href="../index.html" class="nav__link">Home</a>
+                    <a href="about.html" class="nav__link nav__link--active">About</a>
+                    <a href="creators.html" class="nav__link">Creators</a>
+                    <a href="community.html" class="nav__link">Community</a>
+                </nav>
+                <div class="header__actions">
+                    <button class="btn btn--primary" id="connectWalletBtn" style="cursor: pointer;">Connect Wallet</button>
+                    <button class="header__user-btn user-btn" id="userProfileBtn">
+                        <span class="user-btn__icon">👤</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Hero -->
+    <section class="hero" style="padding-top: 120px; padding-bottom: 0px; min-height: auto;">
+        <div class="container">
+            <div class="section-header" style="text-align: center !important; margin-bottom: 0 !important; justify-content: center !important;">
+                <div>
+                    <h1 class="section-header__title" style="font-size: 48px; margin-bottom: 5px; text-transform: capitalize;">About SHINAMI</h1>
+                    <p class="section-header__subtitle" style="margin-bottom: 0;">The World's Leading NFT Marketplace</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-section" style="padding: 5px 0;">
+        <div class="container">
+            <div class="about-content">
+                <p class="about-text">
+                    Shinami is the world's first and largest NFT/Avatar marketplace, revolutionizing the way digital art is created, discovered, and traded. Founded with a vision to democratize digital ownership, we've built a platform that connects creators, collectors, and enthusiasts from around the globe.
+                </p>
+                <p class="about-text">
+                    Our mission is to empower artists and creators by providing them with the tools and platform they need to monetize their digital creations. We believe that every piece of digital art has value, and we're committed to making NFT creation and trading accessible to everyone.
+                </p>
+                <p class="about-text">
+                    With cutting-edge blockchain technology, secure transactions, and a vibrant community, Shinami has become the go-to destination for NFT enthusiasts. Whether you're an artist looking to showcase your work, a collector seeking unique pieces, or a newcomer exploring the world of NFTs, Shinami welcomes you.
+                </p>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid" style="margin-top: 5px; margin-bottom: 5px;">
+                <div class="stat-card">
+                    <div class="stat-number">2M+</div>
+                    <div class="stat-label" style="text-transform: capitalize;">Active Users</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">500K+</div>
+                    <div class="stat-label" style="text-transform: capitalize;">NFTs Created</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$2.5B+</div>
+                    <div class="stat-label" style="text-transform: capitalize;">Total Volume</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label" style="text-transform: capitalize;">Countries</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="how-it-works" style="padding: 5px 0;">
+        <div class="container">
+            <div class="section-header" style="text-align: center !important; margin-bottom: 0 !important; justify-content: center !important;">
+                <h2 class="section-header__title" style="font-size: 36px; margin-bottom: 5px; text-transform: capitalize;">Our Values</h2>
+            </div>
+            <div class="how-it-works__steps" style="margin-top: 5px;">
+                <div class="step-card">
+                    <div class="step-card__icon-circle">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 4L6 14V24C6 33.5 12.5 42 24 44C35.5 42 42 33.5 42 24V14L24 4Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-card__title" style="text-transform: capitalize;">Security First</h3>
+                    <p style="margin-top: 10px; color: var(--color-text-secondary); font-size: 14px;">Your assets and data are protected with industry-leading security measures.</p>
+                </div>
+                <div class="step-card__arrow"></div>
+                <div class="step-card">
+                    <div class="step-card__icon-circle">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 8C15.2 8 8 15.2 8 24C8 32.8 15.2 40 24 40C32.8 40 40 32.8 40 24C40 15.2 32.8 8 24 8ZM24 36C17.4 36 12 30.6 12 24C12 17.4 17.4 12 24 12C30.6 12 36 17.4 36 24C36 30.6 30.6 36 24 36Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-card__title" style="text-transform: capitalize;">Innovation</h3>
+                    <p style="margin-top: 10px; color: var(--color-text-secondary); font-size: 14px;">We continuously push the boundaries of what's possible in the NFT space.</p>
+                </div>
+                <div class="step-card__arrow"></div>
+                <div class="step-card">
+                    <div class="step-card__icon-circle">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 40C15.16 40 8 32.84 8 24C8 15.16 15.16 8 24 8C32.84 8 40 15.16 40 24C40 32.84 32.84 40 24 40ZM26 14H22V22H14V26H22V34H26V26H34V22H26V14Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-card__title" style="text-transform: capitalize;">Community</h3>
+                    <p style="margin-top: 10px; color: var(--color-text-secondary); font-size: 14px;">We believe in building a strong, supportive community of creators and collectors.</p>
+                </div>
+            </div>
+        </div>
+        <div class="how-it-works__glow how-it-works__glow--1"></div>
+        <div class="how-it-works__glow how-it-works__glow--2"></div>
+    </section>
+
+    <!-- Team -->
+    <section class="influencers" style="padding: 5px 0;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 0 !important; justify-content: center;">
+                <div>
+                    <p class="section-header__subtitle" style="margin-bottom: 5px;">Meet the people behind Shinami</p>
+                    <h2 class="section-header__title" style="font-size: 36px; text-transform: capitalize; margin-bottom: 5px;">Our Team</h2>
+                </div>
+            </div>
+            <div class="team-grid" style="margin-top: 5px;">
+                <div class="team-member">
+                    <div class="team-avatar">👨‍💼</div>
+                    <h3 class="team-name">Alex Chen</h3>
+                    <p class="team-role">CEO & Founder</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">👩‍💻</div>
+                    <h3 class="team-name">Sarah Johnson</h3>
+                    <p class="team-role">CTO</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">👨‍🎨</div>
+                    <h3 class="team-name">Mike Rodriguez</h3>
+                    <p class="team-role">Head of Design</p>
+                </div>
+            </div>
+        </div>
+        <div class="influencers__glow influencers__glow--1"></div>
+        <div class="influencers__glow influencers__glow--2"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__main">
+                    <div class="footer__brand">
+                        <div class="footer__logo logo">
+                            <div class="logo__icon"></div>
+                            <span class="logo__text">SHINAMI</span>
+                        </div>
+                        <p class="footer__description">
+                            Shihami is the world's leading NFTs marketplace where you can discover, sell and bid NFTs and get rich
+                        </p>
+                        <div class="footer__social social">
+                            <a href="https://facebook.com" target="_blank" class="social__link" title="Facebook">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="social__link" title="Twitter">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social__link" title="Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                                </svg>
+                            </a>
+                            <a href="https://telegram.org" target="_blank" class="social__link" title="Telegram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="footer__copyright">All rights reserved @Faizansayani</p>
+                    </div>
+                    <nav class="footer__nav">
+                        <div class="footer__nav-col">
+                            <h3 class="footer__nav-title">About</h3>
+                            <ul class="footer__nav-list">
+                                <li><a href="about.html" class="footer__nav-link">About NFT</a></li>
+                                <li><a href="about.html" class="footer__nav-link">Live Auctions</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-col">
+                            <h3 class="footer__nav-title">Support</h3>
+                            <ul class="footer__nav-list">
+                                <li><a href="community.html" class="footer__nav-link">Help & Support</a></li>
+                                <li><a href="creators.html" class="footer__nav-link">Item Details</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+    <script type="module">
+        import { Modals } from '../js/modals.js';
+        
+        const modals = new Modals();
+        
+        // Connect Wallet button - explicit handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const connectWalletBtn = document.getElementById('connectWalletBtn') || document.querySelector('.header__actions .btn--primary');
+            if (connectWalletBtn) {
+                connectWalletBtn.style.cursor = 'pointer';
+                connectWalletBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    modals.showWalletModal();
+                });
+            }
+        });
+        
+        // User profile button - make it more functional
+        document.addEventListener('DOMContentLoaded', function() {
+            const userProfileBtn = document.getElementById('userProfileBtn');
+            if (userProfileBtn) {
+                userProfileBtn.style.cursor = 'pointer';
+                userProfileBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Create a profile modal
+                    const modal = modals.createModal();
+                    const modalContent = document.createElement('div');
+                    modalContent.className = 'modal-content';
+                    modalContent.style.cssText = `
+                        background: var(--color-bg-card);
+                        padding: 40px;
+                        border-radius: 20px;
+                        max-width: 500px;
+                        width: 90%;
+                        text-align: center;
+                        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                    `;
+                    
+                    modalContent.innerHTML = `
+                        <h2 style="color: var(--color-text-primary); margin-bottom: 20px; font-size: 28px;">👤 User Profile</h2>
+                        <div style="margin-bottom: 30px;">
+                            <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 48px;">👤</div>
+                            <h3 style="color: var(--color-text-primary); margin-bottom: 10px;">Guest User</h3>
+                            <p style="color: var(--color-text-secondary); margin-bottom: 20px;">Connect your wallet to view your profile</p>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px;">
+                            <div style="padding: 20px; background: var(--color-bg-secondary); border-radius: 12px;">
+                                <div style="font-size: 24px; font-weight: bold; color: var(--color-primary); margin-bottom: 5px;">0</div>
+                                <div style="color: var(--color-text-secondary); font-size: 14px;">NFTs Owned</div>
+                            </div>
+                            <div style="padding: 20px; background: var(--color-bg-secondary); border-radius: 12px;">
+                                <div style="font-size: 24px; font-weight: bold; color: var(--color-primary); margin-bottom: 5px;">0</div>
+                                <div style="color: var(--color-text-secondary); font-size: 14px;">Collections</div>
+                            </div>
+                        </div>
+                        <button class="btn btn--primary" style="width: 100%; padding: 15px; font-size: 16px; margin-top: 20px;" onclick="this.closest('.modal').remove()">Close</button>
+                    `;
+                    
+                    modal.appendChild(modalContent);
+                    document.body.appendChild(modal);
+                    
+                    // Close on background click
+                    modal.addEventListener('click', function(e) {
+                        if (e.target === modal) {
+                            modal.remove();
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

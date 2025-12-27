@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>SHINAMI - NFT Marketplace | Buy, Sell & Discover Digital Assets</title>
+    <meta name="title" content="SHINAMI - NFT Marketplace | Buy, Sell & Discover Digital Assets">
+    <meta name="description" content="SHINAMI is the world's leading NFT marketplace where you can discover, create, sell and bid on unique digital assets. Join our community of creators and collectors.">
+    <meta name="keywords" content="NFT, NFT marketplace, digital art, blockchain, crypto art, buy NFT, sell NFT, NFT auction, digital collectibles">
+    <meta name="author" content="SHINAMI">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shinami.io/">
+    <meta property="og:title" content="SHINAMI - NFT Marketplace | Buy, Sell & Discover Digital Assets">
+    <meta property="og:description" content="World's leading NFT marketplace. Discover, create, sell and bid on unique digital assets.">
+    <meta property="og:image" content="https://shinami.io/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://shinami.io/">
+    <meta property="twitter:title" content="SHINAMI - NFT Marketplace">
+    <meta property="twitter:description" content="World's leading NFT marketplace. Discover, create, sell and bid on unique digital assets.">
+    <meta property="twitter:image" content="https://shinami.io/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%238B5CF6'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-weight='bold'>S</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Performance -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#8B5CF6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SHINAMI">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="header__logo logo">
+                    <div class="logo__icon"></div>
+                    <span class="logo__text">SHINAMI</span>
+                </a>
+                <nav class="header__nav nav">
+                    <a href="index.html" class="nav__link nav__link--active">Home</a>
+                    <a href="pages/about.html" class="nav__link">About</a>
+                    <a href="pages/creators.html" class="nav__link">Creators</a>
+                    <a href="pages/community.html" class="nav__link">Community</a>
+                </nav>
+                <div class="header__actions">
+                    <button class="btn btn--primary">Connect Wallet</button>
+                    <button class="header__user-btn user-btn" id="userProfileBtn">
+                        <span class="user-btn__icon">👤</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__container">
+            <div class="hero__upper-section">
+                <div class="hero__center">
+                    <div class="hero__left-side">
+                        <div class="hero__content">
+                            <h1 class="hero__title">
+                                EXPLORE, CREATE AND<br>
+                                SELL YOUR NFT'S ON<br>
+                                SHINAMI
+                            </h1>
+                            <p class="hero__description">
+                                Shihami is the World's first and largest NFT/Avatar marketplace
+                            </p>
+                        </div>
+                        <div class="hero__cta">
+                            <a href="pages/about.html" class="btn btn--primary btn--large">Learn More</a>
+                            <a href="pages/creators.html" class="btn btn--secondary btn--large">Create</a>
+                        </div>
+                    </div>
+                    <div class="hero__nft-cards">
+                        <!-- NFT1 - Top Center -->
+                        <div class="hero-nft-card hero-nft-card--1">
+                            <div class="hero-nft-card__image">
+                                <img src="https://images.unsplash.com/photo-1634973357973-f2ed2657db3c?w=400&h=300&fit=crop" alt="NFT Monkey" class="hero-nft-card__img">
+                            </div>
+                            <div class="hero-nft-card__content">
+                                <div class="hero-nft-card__user">
+                                    <div class="hero-nft-card__avatar"></div>
+                                    <div class="hero-nft-card__user-info">
+                                        <h3 class="hero-nft-card__name">Monkey ape</h3>
+                                        <p class="hero-nft-card__author">By @JSmith</p>
+                                    </div>
+                                </div>
+                                <div class="hero-nft-card__details">
+                                    <div class="hero-nft-card__badge">
+                                        <span>on sale</span>
+                                        <span class="hero-nft-card__fire">🔥</span>
+                                    </div>
+                                    <div class="hero-nft-card__price-block">
+                                        <span class="hero-nft-card__eth-icon">⟠</span>
+                                        <div class="hero-nft-card__price-info">
+                                            <span class="hero-nft-card__price">4.89 ETH</span>
+                                            <span class="hero-nft-card__usd">($ 654,874.86)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="hero-nft-card__btn">Place a bid</button>
+                            </div>
+                        </div>
+
+                        <!-- NFT2 - Left Lower -->
+                        <div class="hero-nft-card hero-nft-card--2">
+                            <div class="hero-nft-card__image">
+                                <img src="https://images.unsplash.com/photo-1635322966219-b75ed372eb01?w=400&h=300&fit=crop" alt="NFT Art" class="hero-nft-card__img">
+                            </div>
+                            <div class="hero-nft-card__content">
+                                <div class="hero-nft-card__user">
+                                    <div class="hero-nft-card__avatar"></div>
+                                    <div class="hero-nft-card__user-info">
+                                        <h3 class="hero-nft-card__name">Moonfall</h3>
+                                        <p class="hero-nft-card__author">By @JSmith</p>
+                                    </div>
+                                </div>
+                                <div class="hero-nft-card__details">
+                                    <div class="hero-nft-card__badge">
+                                        <span>on sale</span>
+                                        <span class="hero-nft-card__fire">🔥</span>
+                                    </div>
+                                    <div class="hero-nft-card__price-block">
+                                        <span class="hero-nft-card__eth-icon">⟠</span>
+                                        <div class="hero-nft-card__price-info">
+                                            <span class="hero-nft-card__price">4.89 ETH</span>
+                                            <span class="hero-nft-card__usd">($ 654,874.86)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="hero-nft-card__btn">Place a bid</button>
+                            </div>
+                        </div>
+
+                        <!-- NFT3 - Right Lower -->
+                        <div class="hero-nft-card hero-nft-card--3">
+                            <div class="hero-nft-card__image">
+                                <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=300&fit=crop" alt="NFT Crypto" class="hero-nft-card__img">
+                            </div>
+                            <div class="hero-nft-card__content">
+                                <div class="hero-nft-card__user">
+                                    <div class="hero-nft-card__avatar"></div>
+                                    <div class="hero-nft-card__user-info">
+                                        <h3 class="hero-nft-card__name">Wired Human</h3>
+                                        <p class="hero-nft-card__author">By @JSmith</p>
+                                    </div>
+                                </div>
+                                <div class="hero-nft-card__details">
+                                    <div class="hero-nft-card__badge">
+                                        <span>on sale</span>
+                                        <span class="hero-nft-card__fire">🔥</span>
+                                    </div>
+                                    <div class="hero-nft-card__price-block">
+                                        <span class="hero-nft-card__eth-icon">⟠</span>
+                                        <div class="hero-nft-card__price-info">
+                                            <span class="hero-nft-card__price">4.89 ETH</span>
+                                            <span class="hero-nft-card__usd">($ 654,874.86)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="hero-nft-card__btn">Place a bid</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+    </section>
+
+    <!-- Wallets Section -->
+    <section class="wallets">
+        <div class="container">
+            <h2 class="wallets__title section-title">Wallets We Support</h2>
+            <div class="wallets__grid">
+                <div class="wallet-card">
+                    <div class="wallet-card__icon wallet-card__icon--metamask"></div>
+                    <div class="wallet-card__name">MetaMask</div>
+                </div>
+                <div class="wallet-card">
+                    <div class="wallet-card__icon wallet-card__icon--coinbase"></div>
+                    <div class="wallet-card__name">Coinbase</div>
+                </div>
+                <div class="wallet-card">
+                    <div class="wallet-card__icon wallet-card__icon--trust"></div>
+                    <div class="wallet-card__name">Trust Wallet</div>
+                </div>
+                <div class="wallet-card">
+                    <div class="wallet-card__icon wallet-card__icon--phantom"></div>
+                    <div class="wallet-card__name">Phantom</div>
+                </div>
+                <div class="wallet-card">
+                    <div class="wallet-card__icon wallet-card__icon--walletconnect"></div>
+                    <div class="wallet-card__name">WalletConnect</div>
+                </div>
+            </div>
+        </div>
+        <div class="wallets__glow wallets__glow--1"></div>
+        <div class="wallets__glow wallets__glow--2"></div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="how-it-works__header">
+                <h2 class="how-it-works__title">How it works</h2>
+            </div>
+            <div class="how-it-works__steps">
+                <div class="step-card">
+                    <div class="step-card__icon-circle">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M38 18H28V8C28 6.9 27.1 6 26 6H22C20.9 6 20 6.9 20 8V18H10C8.9 18 8 18.9 8 20V24C8 25.1 8.9 26 10 26H20V36C20 37.1 20.9 38 22 38H26C27.1 38 28 37.1 28 36V26H38C39.1 26 40 25.1 40 24V20C40 18.9 39.1 18 38 18Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-card__title">Set up your wallet</h3>
+                </div>
+                <div class="step-card__arrow"></div>
+                
+                <div class="step-card">
+                    <div class="step-card__icon-circle">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M40 12H32V8C32 5.8 30.2 4 28 4H20C17.8 4 16 5.8 16 8V12H8C5.8 12 4 13.8 4 16V40C4 42.2 5.8 44 8 44H40C42.2 44 44 42.2 44 40V16C44 13.8 42.2 12 40 12ZM20 8H28V12H20V8ZM40 40H8V16H40V40Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-card__title">Create your collection</h3>
+                </div>
+                <div class="step-card__arrow"></div>
+                
+                <div class="step-card">
+                    <div class="step-card__icon-circle">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M38 10H26V6C26 4.9 25.1 4 24 4C22.9 4 22 4.9 22 6V10H10C7.8 10 6 11.8 6 14V38C6 40.2 7.8 42 10 42H38C40.2 42 42 40.2 42 38V14C42 11.8 40.2 10 38 10ZM38 38H10V18H38V38Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-card__title">Add your NFTs</h3>
+                </div>
+                <div class="step-card__arrow"></div>
+                
+                <div class="step-card">
+                    <div class="step-card__icon-circle">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M42 18C42 13 38 10 34 10C32 10 30 11 29 12L19 7C19 5 17 4 15 4C11 4 8 7 8 11C8 15 11 18 15 18C17 18 19 17 20 16L30 21C30 23 32 24 34 24C38 24 42 21 42 18ZM34 13C36 13 38 15 38 18C38 20 36 21 34 21C32 21 30 19 30 18C30 15 32 13 34 13Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-card__title">List them for sale</h3>
+                </div>
+            </div>
+        </div>
+        <div class="how-it-works__glow how-it-works__glow--1"></div>
+        <div class="how-it-works__glow how-it-works__glow--2"></div>
+    </section>
+
+    <!-- Our Collection Section -->
+    <section class="collection">
+        <div class="collection__container">
+            <div class="collection__header">
+                <p class="collection__subtitle">Explore our newly released NFT collection</p>
+                <h2 class="collection__title">Our collection</h2>
+            </div>
+            <div class="collection__grid">
+                <!-- Rectangle 31 - Small left bottom -->
+                <div class="collection-card collection-card--1">
+                    <img src="https://images.unsplash.com/photo-1634973357973-f2ed2657db3c?w=400&h=400&fit=crop" alt="NFT Collection" class="collection-card__img">
+                </div>
+                <!-- Rectangle 28 - Medium left -->
+                <div class="collection-card collection-card--2">
+                    <img src="https://images.unsplash.com/photo-1635322966219-b75ed372eb01?w=400&h=400&fit=crop" alt="NFT Collection" class="collection-card__img">
+                </div>
+                <!-- Rectangle 27 - Large left -->
+                <div class="collection-card collection-card--3">
+                    <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=500&h=600&fit=crop" alt="NFT Collection" class="collection-card__img">
+                </div>
+                <!-- Rectangle 25 - Largest center -->
+                <div class="collection-card collection-card--4">
+                    <img src="https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?w=500&h=600&fit=crop" alt="NFT Collection" class="collection-card__img">
+                </div>
+                <!-- Rectangle 26 - Large right -->
+                <div class="collection-card collection-card--5">
+                    <img src="https://images.unsplash.com/photo-1643101809204-6fb869816dde?w=500&h=600&fit=crop" alt="NFT Collection" class="collection-card__img">
+                </div>
+                <!-- Rectangle 29 - Medium right -->
+                <div class="collection-card collection-card--6">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=400&fit=crop" alt="NFT Collection" class="collection-card__img">
+                </div>
+                <!-- Rectangle 30 - Small right bottom -->
+                <div class="collection-card collection-card--7">
+                    <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=400&h=400&fit=crop" alt="NFT Collection" class="collection-card__img">
+                </div>
+            </div>
+        </div>
+        <div class="collection__glow collection__glow--1"></div>
+        <div class="collection__glow collection__glow--2"></div>
+    </section>
+
+    <!-- Hot Trending NFTs Section -->
+    <section class="trending">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <p class="section-header__subtitle">Checkout the hottest NFTs in the market right now</p>
+                    <h2 class="section-header__title">Hot Trending NFTs</h2>
+                </div>
+                <button class="btn btn--outline">Load more</button>
+            </div>
+            <div class="trending__grid nft-grid">
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1634973357973-f2ed2657db3c?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/>
+                            </svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Monkey ape</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge">
+                                <span>on sale</span>
+                                <span class="nft-card__fire">🔥</span>
+                            </div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/>
+                                    <path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/>
+                            </svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Moonfall</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge">
+                                <span>on sale</span>
+                                <span class="nft-card__fire">🔥</span>
+                            </div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/>
+                                    <path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1635322966219-b75ed372eb01?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/>
+                            </svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Wired Human</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge">
+                                <span>on sale</span>
+                                <span class="nft-card__fire">🔥</span>
+                            </div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/>
+                                    <path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/>
+                            </svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Racer-To-Go</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge">
+                                <span>on sale</span>
+                                <span class="nft-card__fire">🔥</span>
+                            </div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/>
+                                    <path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1643101809204-6fb869816dde?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/>
+                            </svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Monkey ape</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge">
+                                <span>on sale</span>
+                                <span class="nft-card__fire">🔥</span>
+                            </div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/>
+                                    <path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/>
+                            </svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Moonfall</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge">
+                                <span>on sale</span>
+                                <span class="nft-card__fire">🔥</span>
+                            </div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/>
+                                    <path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1635322966219-b75ed372eb01?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/>
+                            </svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Wired Human</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge">
+                                <span>on sale</span>
+                                <span class="nft-card__fire">🔥</span>
+                            </div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/>
+                                    <path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/>
+                            </svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Racer-To-Go</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge">
+                                <span>on sale</span>
+                                <span class="nft-card__fire">🔥</span>
+                            </div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/>
+                                    <path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="trending__glow trending__glow--1"></div>
+        <div class="trending__glow trending__glow--2"></div>
+    </section>
+
+    <!-- Live Auction NFTs Section -->
+    <section class="auction">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <p class="section-header__subtitle">Place your bid on the latest NFTs</p>
+                    <h2 class="section-header__title">Live Auction NFTs</h2>
+                </div>
+                <button class="btn btn--outline">Load more</button>
+            </div>
+            <div class="auction__grid nft-grid">
+                <!-- Card 1 -->
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1634973357973-f2ed2657db3c?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor"><path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/></svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Monkey ape</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge"><span>on sale</span><span class="nft-card__fire">🔥</span></div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/><path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor"><path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/></svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Moonfall</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge"><span>on sale</span><span class="nft-card__fire">🔥</span></div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/><path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1635322966219-b75ed372eb01?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor"><path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/></svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Wired Human</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge"><span>on sale</span><span class="nft-card__fire">🔥</span></div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/><path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor"><path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/></svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Racer-To-Go</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge"><span>on sale</span><span class="nft-card__fire">🔥</span></div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/><path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor"><path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/></svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Monkey ape</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge"><span>on sale</span><span class="nft-card__fire">🔥</span></div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/><path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1634973357973-f2ed2657db3c?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor"><path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/></svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Moonfall</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge"><span>on sale</span><span class="nft-card__fire">🔥</span></div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/><path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1635322966219-b75ed372eb01?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor"><path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/></svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Wired Human</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge"><span>on sale</span><span class="nft-card__fire">🔥</span></div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/><path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="nft-card">
+                    <div class="nft-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=370&h=261&fit=crop" alt="NFT" class="nft-card__image">
+                        <div class="nft-card__favorites">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="currentColor"><path d="M8.5 15L7.2125 13.8438C2.975 10.0313 0 7.35938 0 4.09375C0 1.42188 2.0125 0 4.25 0C5.5625 0 6.8125 0.65625 7.5 1.65625H9.5C10.1875 0.65625 11.4375 0 12.75 0C14.9875 0 17 1.42188 17 4.09375C17 7.35938 14.025 10.0313 9.7875 13.8438L8.5 15Z"/></svg>
+                            <span>341</span>
+                        </div>
+                    </div>
+                    <div class="nft-card__user">
+                        <div class="nft-card__avatar"></div>
+                        <div class="nft-card__user-info">
+                            <div class="nft-card__user-name">Racer-To-Go</div>
+                            <div class="nft-card__user-author">By @JSmith</div>
+                        </div>
+                    </div>
+                    <div class="nft-card__content">
+                        <div class="nft-card__details">
+                            <div class="nft-card__badge"><span>on sale</span><span class="nft-card__fire">🔥</span></div>
+                            <div class="nft-card__price-block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#8B5CF6"/><path d="M10 5V10L13.5 12" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                                <div class="nft-card__price-info">
+                                    <div class="nft-card__price">4.89 ETH</div>
+                                    <div class="nft-card__usd">($ 654,874.86)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nft-card__btn">Place a bid</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="auction__glow auction__glow--1"></div>
+        <div class="auction__glow auction__glow--2"></div>
+    </section>
+
+    <!-- Joined Influencers Section -->
+    <section class="influencers">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <p class="section-header__subtitle">Watch and follow celebrities to get the best collection of NFTs</p>
+                    <h2 class="section-header__title">joined influencers</h2>
+                </div>
+                <a href="pages/about.html" class="btn btn--outline">view all</a>
+            </div>
+            <div class="influencers__grid">
+                <div class="influencer-card">
+                    <div class="influencer-card__images">
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    </div>
+                    <div class="influencer-card__avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                    <div class="influencer-card__info">
+                        <div class="influencer-card__content">
+                            <h3 class="influencer-card__name">John Smith</h3>
+                            <p class="influencer-card__username">@Jsmith</p>
+                        </div>
+                        <button class="btn btn--small btn--primary">Follow</button>
+                    </div>
+                </div>
+                <div class="influencer-card">
+                    <div class="influencer-card__images">
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                    </div>
+                    <div class="influencer-card__avatar" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                    <div class="influencer-card__info">
+                        <div class="influencer-card__content">
+                            <h3 class="influencer-card__name">John Smith</h3>
+                            <p class="influencer-card__username">@Jsmith</p>
+                        </div>
+                        <button class="btn btn--small btn--primary">Follow</button>
+                    </div>
+                </div>
+                <div class="influencer-card">
+                    <div class="influencer-card__images">
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);"></div>
+                    </div>
+                    <div class="influencer-card__avatar" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="influencer-card__info">
+                        <div class="influencer-card__content">
+                            <h3 class="influencer-card__name">John Smith</h3>
+                            <p class="influencer-card__username">@Jsmith</p>
+                        </div>
+                        <button class="btn btn--small btn--primary">Follow</button>
+                    </div>
+                </div>
+                <div class="influencer-card">
+                    <div class="influencer-card__images">
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                    </div>
+                    <div class="influencer-card__avatar" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+                    <div class="influencer-card__info">
+                        <div class="influencer-card__content">
+                            <h3 class="influencer-card__name">John Smith</h3>
+                            <p class="influencer-card__username">@Jsmith</p>
+                        </div>
+                        <button class="btn btn--small btn--primary">Follow</button>
+                    </div>
+                </div>
+                <div class="influencer-card">
+                    <div class="influencer-card__images">
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                    </div>
+                    <div class="influencer-card__avatar" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
+                    <div class="influencer-card__info">
+                        <div class="influencer-card__content">
+                            <h3 class="influencer-card__name">John Smith</h3>
+                            <p class="influencer-card__username">@Jsmith</p>
+                        </div>
+                        <button class="btn btn--small btn--primary">Follow</button>
+                    </div>
+                </div>
+                <div class="influencer-card">
+                    <div class="influencer-card__images">
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);"></div>
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    </div>
+                    <div class="influencer-card__avatar" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <div class="influencer-card__info">
+                        <div class="influencer-card__content">
+                            <h3 class="influencer-card__name">John Smith</h3>
+                            <p class="influencer-card__username">@Jsmith</p>
+                        </div>
+                        <button class="btn btn--small btn--primary">Follow</button>
+                    </div>
+                </div>
+                <div class="influencer-card">
+                    <div class="influencer-card__images">
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+                    </div>
+                    <div class="influencer-card__avatar" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                    <div class="influencer-card__info">
+                        <div class="influencer-card__content">
+                            <h3 class="influencer-card__name">John Smith</h3>
+                            <p class="influencer-card__username">@Jsmith</p>
+                        </div>
+                        <button class="btn btn--small btn--primary">Follow</button>
+                    </div>
+                </div>
+                <div class="influencer-card">
+                    <div class="influencer-card__images">
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
+                    </div>
+                    <div class="influencer-card__avatar" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);"></div>
+                    <div class="influencer-card__info">
+                        <div class="influencer-card__content">
+                            <h3 class="influencer-card__name">John Smith</h3>
+                            <p class="influencer-card__username">@Jsmith</p>
+                        </div>
+                        <button class="btn btn--small btn--primary">Follow</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="influencers__glow influencers__glow--1"></div>
+        <div class="influencers__glow influencers__glow--2"></div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="subscribe">
+        <div class="container">
+            <div class="subscribe__content">
+                <h2 class="subscribe__title">Ready for Next NFT Drop?</h2>
+                <form class="subscribe__form">
+                    <input type="email" class="subscribe__input" placeholder="info@gmail.com">
+                    <button type="submit" class="subscribe__btn">
+                        <span class="subscribe__btn-icon">→</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="subscribe__glow"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__main">
+                    <div class="footer__brand">
+                        <div class="footer__logo logo">
+                            <div class="logo__icon"></div>
+                            <span class="logo__text">SHINAMI</span>
+                        </div>
+                        <p class="footer__description">
+                            Shihami is the world's leading NFTs marketplace where you can discover, sell and bid NFTs and get rich
+                        </p>
+                        <div class="footer__social social">
+                            <a href="https://facebook.com" target="_blank" class="social__link" title="Facebook">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="social__link" title="Twitter">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social__link" title="Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                                </svg>
+                            </a>
+                            <a href="https://telegram.org" target="_blank" class="social__link" title="Telegram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="footer__copyright">All rights reserved @Faizansayani</p>
+                    </div>
+                    <nav class="footer__nav">
+                        <div class="footer__nav-col">
+                            <h3 class="footer__nav-title">About</h3>
+                            <ul class="footer__nav-list">
+                                <li><a href="pages/about.html" class="footer__nav-link">About NFT</a></li>
+                                <li><a href="pages/about.html" class="footer__nav-link">Live Auctions</a></li>
+                                <li><a href="pages/community.html" class="footer__nav-link">NFT Blog</a></li>
+                                <li><a href="pages/about.html" class="footer__nav-link">Activity</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-col">
+                            <h3 class="footer__nav-title">Support</h3>
+                            <ul class="footer__nav-list">
+                                <li><a href="pages/community.html" class="footer__nav-link">Help & Support</a></li>
+                                <li><a href="pages/about.html" class="footer__nav-link">Item Details</a></li>
+                                <li><a href="pages/creators.html" class="footer__nav-link">Author Profile</a></li>
+                                <li><a href="pages/about.html" class="footer__nav-link">Collection</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+    <script>
+        // Simple inline script that runs immediately - no module dependencies
+        (function() {
+            function initButtons() {
+                // Connect Wallet button
+                const connectWalletBtn = document.querySelector('.header__actions .btn--primary');
+                if (connectWalletBtn && !connectWalletBtn.dataset.listenerAdded) {
+                    connectWalletBtn.dataset.listenerAdded = 'true';
+                    connectWalletBtn.style.cursor = 'pointer';
+                    connectWalletBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        alert('🔗 Connect Wallet\n\nPlease select a wallet:\n\n• MetaMask\n• WalletConnect\n• Coinbase Wallet\n\nThis is a demo. In production, this would connect to your wallet.');
+                    });
+                }
+                
+                // User Profile button
+                const userProfileBtn = document.getElementById('userProfileBtn');
+                if (userProfileBtn && !userProfileBtn.dataset.listenerAdded) {
+                    userProfileBtn.dataset.listenerAdded = 'true';
+                    userProfileBtn.style.cursor = 'pointer';
+                    userProfileBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        // Create modal
+                        const modal = document.createElement('div');
+                        modal.className = 'modal';
+                        modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); display: flex; align-items: center; justify-content: center; z-index: 10000;';
+                        
+                        const modalContent = document.createElement('div');
+                        modalContent.className = 'modal-content';
+                        modalContent.style.cssText = 'background: #1a1a2e; padding: 40px; border-radius: 20px; max-width: 500px; width: 90%; text-align: center; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); border: 2px solid #8b5cf6;';
+                        
+                        modalContent.innerHTML = `
+                            <h2 style="color: #fff; margin-bottom: 20px; font-size: 28px;">👤 User Profile</h2>
+                            <div style="margin-bottom: 30px;">
+                                <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 48px;">👤</div>
+                                <h3 style="color: #fff; margin-bottom: 10px;">Guest User</h3>
+                                <p style="color: #a0a0a0; margin-bottom: 20px;">Connect your wallet to view your profile</p>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px;">
+                                <div style="padding: 20px; background: #16213e; border-radius: 12px;">
+                                    <div style="font-size: 24px; font-weight: bold; color: #8b5cf6; margin-bottom: 5px;">0</div>
+                                    <div style="color: #a0a0a0; font-size: 14px;">NFTs Owned</div>
+                                </div>
+                                <div style="padding: 20px; background: #16213e; border-radius: 12px;">
+                                    <div style="font-size: 24px; font-weight: bold; color: #8b5cf6; margin-bottom: 5px;">0</div>
+                                    <div style="color: #a0a0a0; font-size: 14px;">Collections</div>
+                                </div>
+                            </div>
+                            <button class="close-modal-btn" style="width: 100%; padding: 15px; font-size: 16px; margin-top: 20px; background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); color: white; border: none; border-radius: 12px; cursor: pointer;">Close</button>
+                        `;
+                        
+                        modal.appendChild(modalContent);
+                        document.body.appendChild(modal);
+                        
+                        // Close handlers
+                        modalContent.querySelector('.close-modal-btn').addEventListener('click', () => modal.remove());
+                        modal.addEventListener('click', function(e) {
+                            if (e.target === modal) modal.remove();
+                        });
+                    });
+                }
+            }
+            
+            // Run immediately and after DOM loads
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initButtons);
+            } else {
+                initButtons();
+            }
+            
+            // Also run after a short delay to catch any late-loading elements
+            setTimeout(initButtons, 100);
+            setTimeout(initButtons, 500);
+        })();
+    </script>
+    <script type="module">
+        // Collection cards - make them clickable
+        document.querySelectorAll('.collection-card').forEach((card, index) => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', function() {
+                window.location.href = 'pages/about.html';
+            });
+        });
+
+        // Hero NFT cards - make buttons work (handled in unified handler below)
+
+        // Hero NFT cards - make cards clickable (navigate to explore)
+        document.querySelectorAll('.hero-nft-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (!e.target.closest('button')) {
+                    window.location.href = 'pages/about.html';
+                }
+            });
+        });
+
+        // NFT cards - make buttons work (SIMPLE DIRECT APPROACH)
+        function setupNFTCardButtons() {
+            document.querySelectorAll('.nft-card__btn').forEach(btn => {
+                if (!btn.dataset.listenerAdded) {
+                    btn.dataset.listenerAdded = 'true';
+                    btn.style.cursor = 'pointer';
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const card = this.closest('.nft-card');
+                        const nftName = card?.querySelector('.nft-card__user-name')?.textContent || 'NFT';
+                        const price = card?.querySelector('.nft-card__price')?.textContent || '0 ETH';
+                        alert(`💰 Place a Bid\n\nNFT: ${nftName}\nCurrent Price: ${price}\n\nEnter your bid amount to place a bid on this NFT.`);
+                    });
+                }
+            });
+        }
+        
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', setupNFTCardButtons);
+        } else {
+            setupNFTCardButtons();
+        }
+        
+        setTimeout(setupNFTCardButtons, 100);
+        setTimeout(setupNFTCardButtons, 500);
+
+        // NFT cards - make cards clickable (navigate to explore)
+        document.querySelectorAll('.nft-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (!e.target.closest('button') && !e.target.closest('.nft-card__favorites')) {
+                    window.location.href = 'pages/about.html';
+                }
+            });
+        });
+
+        // Wallet cards - make them clickable
+        document.querySelectorAll('.wallet-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const walletName = this.querySelector('.wallet-card__name').textContent;
+                alert(`🔗 Connecting to ${walletName}...\n\nPlease install ${walletName} extension to continue.`);
+            });
+        });
+
+        // Step cards - make them clickable
+        document.querySelectorAll('.step-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const stepTitle = this.querySelector('.step-card__title').textContent;
+                window.location.href = 'pages/creators.html';
+            });
+        });
+
+        // Influencer cards - make them clickable
+        document.querySelectorAll('.influencer-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (!e.target.closest('button')) {
+                    window.location.href = 'pages/creators.html';
+                }
+            });
+        });
+
+        // NFT card favorites (likes) - make them clickable
+        document.querySelectorAll('.nft-card__favorites').forEach(fav => {
+            fav.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const span = this.querySelector('span');
+                if (span) {
+                    let count = parseInt(span.textContent) || 0;
+                    count++;
+                    span.textContent = count;
+                    this.style.transform = 'scale(1.3)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 200);
+                }
+            });
+        });
+
+        // Follow buttons in influencer cards - SIMPLE DIRECT APPROACH
+        function setupFollowButtons() {
+            document.querySelectorAll('.influencer-card .btn--small, .influencer-card .btn--primary, .influencer-card button').forEach(btn => {
+                const btnText = btn.textContent.trim();
+                if ((btnText === 'Follow' || btnText === 'Following' || btn.classList.contains('btn--primary') || btn.classList.contains('btn--small')) && !btn.dataset.listenerAdded) {
+                    btn.dataset.listenerAdded = 'true';
+                    btn.style.cursor = 'pointer';
+                    
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const card = this.closest('.influencer-card');
+                        const creatorName = card?.querySelector('.influencer-card__name')?.textContent || 'Creator';
+                        
+                        if (this.textContent.trim() === 'Follow') {
+                            this.textContent = 'Following';
+                            this.style.background = 'transparent';
+                            this.style.border = '2px solid #8b5cf6';
+                            this.style.color = '#8b5cf6';
+                            alert(`✅ You're now following ${creatorName}!\n\nYou'll receive updates about their new NFT releases.`);
+                        } else if (this.textContent.trim() === 'Following') {
+                            this.textContent = 'Follow';
+                            this.style.background = 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)';
+                            this.style.border = 'none';
+                            this.style.color = 'white';
+                            alert(`❌ You unfollowed ${creatorName}`);
+                        }
+                    });
+                }
+            });
+        }
+        
+        // Setup follow buttons immediately
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', setupFollowButtons);
+        } else {
+            setupFollowButtons();
+        }
+        
+        // Retry multiple times
+        setTimeout(setupFollowButtons, 100);
+        setTimeout(setupFollowButtons, 500);
+        setTimeout(setupFollowButtons, 1000);
+        
+        // Make sure all Place a bid buttons work - SIMPLE DIRECT APPROACH
+        function setupBidButtons() {
+            document.querySelectorAll('.nft-card__btn, .hero-nft-card__btn').forEach(btn => {
+                if (!btn.dataset.listenerAdded) {
+                    btn.dataset.listenerAdded = 'true';
+                    btn.style.cursor = 'pointer';
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const card = this.closest('.nft-card, .hero-nft-card');
+                        const nftName = card?.querySelector('.nft-card__user-name, .hero-nft-card__name')?.textContent || 'NFT';
+                        const price = card?.querySelector('.nft-card__price, .hero-nft-card__price')?.textContent || '0 ETH';
+                        alert(`💰 Place a Bid\n\nNFT: ${nftName}\nCurrent Price: ${price}\n\nEnter your bid amount to place a bid on this NFT.`);
+                    });
+                }
+            });
+        }
+        
+        // Setup bid buttons immediately - MULTIPLE ATTEMPTS
+        function initAllButtons() {
+            setupBidButtons();
+            setupFollowButtons();
+            setupNFTCardButtons();
+        }
+        
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initAllButtons);
+        } else {
+            initAllButtons();
+        }
+        
+        // Retry multiple times to catch all buttons
+        setTimeout(initAllButtons, 50);
+        setTimeout(initAllButtons, 100);
+        setTimeout(initAllButtons, 300);
+        setTimeout(initAllButtons, 500);
+        setTimeout(initAllButtons, 1000);
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+

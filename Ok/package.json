@@ -1,0 +1,8 @@
+{
+  "name": "shinami-nft-marketplace",
+  "version": "1.0.0",
+  "description": "SHINAMI NFT Marketplace - современный лендинг для NFT маркетплейса",
+  "scripts": {
+    "serve": "npx serve"
+  }
+}

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creators - SHINAMI</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preload" href="../styles.css" as="style">
+    <style>
+        @media (max-width: 1024px) {
+            .how-it-works__steps {
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+            }
+            .step-card {
+                flex: 0 0 calc(50% - 15px) !important;
+                min-width: 200px !important;
+            }
+            .influencers__grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 100px !important;
+                padding-bottom: 20px !important;
+            }
+            .section-header__title {
+                font-size: 36px !important;
+            }
+            .how-it-works__steps {
+                flex-direction: column !important;
+            }
+            .step-card {
+                width: 100% !important;
+                max-width: 300px !important;
+            }
+            .influencers__grid {
+                grid-template-columns: 1fr !important;
+            }
+            .create-nft-form {
+                padding: 20px !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero {
+                padding-top: 90px !important;
+                padding-bottom: 0px !important;
+            }
+            .section-header__title {
+                font-size: 28px !important;
+            }
+            .create-nft-form {
+                margin: 0 10px !important;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%238B5CF6'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-weight='bold'>S</text></svg>">
+</head>
+<body class="creators-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="../index.html" class="header__logo logo">
+                    <div class="logo__icon"></div>
+                    <span class="logo__text">SHINAMI</span>
+                </a>
+                <nav class="header__nav nav">
+                    <a href="../index.html" class="nav__link">Home</a>
+                    <a href="about.html" class="nav__link">About</a>
+                    <a href="creators.html" class="nav__link nav__link--active">Creators</a>
+                    <a href="community.html" class="nav__link">Community</a>
+                </nav>
+                <div class="header__actions">
+                    <button class="btn btn--primary">Connect Wallet</button>
+                    <button class="header__user-btn user-btn">
+                        <span class="user-btn__icon">👤</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Creators Hero -->
+    <section class="hero" style="padding-top: 120px; padding-bottom: 0px; min-height: auto;">
+        <div class="container">
+            <div class="section-header" style="flex-direction: column; align-items: center; gap: 20px; text-align: center;">
+                <div>
+                    <h1 class="section-header__title" style="font-size: 48px; margin-bottom: 15px; text-transform: capitalize;">Become a Creator</h1>
+                    <p class="section-header__subtitle">Create, sell and monetize your digital art as NFTs</p>
+                </div>
+                <a href="#create" class="btn btn--primary btn--large">Create NFT</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works for Creators -->
+    <section class="how-it-works" style="padding: 20px 0;">
+        <div class="container">
+            <div class="how-it-works__header" style="text-align: center;">
+                <h2 class="how-it-works__title" style="font-size: 36px; text-transform: capitalize;">How to Create & Sell</h2>
+            </div>
+            <div class="how-it-works__steps" style="flex-wrap: wrap; justify-content: center;">
+                <div class="step-card">
+                    <div class="step-card__icon-circle">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M38 18H28V8C28 6.9 27.1 6 26 6H22C20.9 6 20 6.9 20 8V18H10C8.9 18 8 18.9 8 20V24C8 25.1 8.9 26 10 26H20V36C20 37.1 20.9 38 22 38H26C27.1 38 28 37.1 28 36V26H38C39.1 26 40 25.1 40 24V20C40 18.9 39.1 18 38 18Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-card__title">Connect Wallet</h3>
+                </div>
+                <div class="step-card__arrow"></div>
+                <div class="step-card">
+                    <div class="step-card__icon-circle">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M40 12H32V8C32 5.8 30.2 4 28 4H20C17.8 4 16 5.8 16 8V12H8C5.8 12 4 13.8 4 16V40C4 42.2 5.8 44 8 44H40C42.2 44 44 42.2 44 40V16C44 13.8 42.2 12 40 12ZM20 8H28V12H20V8ZM40 40H8V16H40V40Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-card__title">Upload Your Art</h3>
+                </div>
+                <div class="step-card__arrow"></div>
+                <div class="step-card">
+                    <div class="step-card__icon-circle">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M38 10H26V6C26 4.9 25.1 4 24 4C22.9 4 22 4.9 22 6V10H10C7.8 10 6 11.8 6 14V38C6 40.2 7.8 42 10 42H38C40.2 42 42 40.2 42 38V14C42 11.8 40.2 10 38 10ZM38 38H10V18H38V38Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-card__title">Set Price</h3>
+                </div>
+                <div class="step-card__arrow"></div>
+                <div class="step-card">
+                    <div class="step-card__icon-circle">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M42 18C42 13 38 10 34 10C32 10 30 11 29 12L19 7C19 5 17 4 15 4C11 4 8 7 8 11C8 15 11 18 15 18C17 18 19 17 20 16L30 21C30 23 32 24 34 24C38 24 42 21 42 18ZM34 13C36 13 38 15 38 18C38 20 36 21 34 21C32 21 30 19 30 18C30 15 32 13 34 13Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-card__title">List for Sale</h3>
+                </div>
+            </div>
+        </div>
+        <div class="how-it-works__glow how-it-works__glow--1"></div>
+        <div class="how-it-works__glow how-it-works__glow--2"></div>
+    </section>
+
+    <!-- Create NFT Form -->
+    <section id="create" class="subscribe" style="padding: 20px 0;">
+        <div class="container">
+            <div class="subscribe__content">
+                <h2 class="subscribe__title" style="font-size: 36px; margin-bottom: 30px; text-transform: capitalize; text-align: center;">Create Your NFT</h2>
+                <form class="create-nft-form" style="max-width: 600px; margin: 0 auto; background: var(--color-bg-card); padding: 30px; border-radius: 20px; border: 2px solid var(--color-border);">
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 10px; color: var(--color-text-primary); font-weight: 600;">NFT Name</label>
+                        <input type="text" class="create-nft-input" placeholder="Enter NFT name" required style="width: 100%; padding: 15px; background: var(--color-bg-darker); border: 2px solid var(--color-border); border-radius: 12px; color: var(--color-text-primary); font-size: 16px;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 10px; color: var(--color-text-primary); font-weight: 600;">Description</label>
+                        <textarea class="create-nft-input" placeholder="Describe your NFT" rows="4" required style="width: 100%; padding: 15px; background: var(--color-bg-darker); border: 2px solid var(--color-border); border-radius: 12px; color: var(--color-text-primary); font-size: 16px; resize: vertical;"></textarea>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 10px; color: var(--color-text-primary); font-weight: 600;">Price (ETH)</label>
+                        <input type="number" step="0.01" class="create-nft-input" placeholder="0.00" required style="width: 100%; padding: 15px; background: var(--color-bg-darker); border: 2px solid var(--color-border); border-radius: 12px; color: var(--color-text-primary); font-size: 16px;">
+                    </div>
+                    <div style="margin-bottom: 30px;">
+                        <label style="display: block; margin-bottom: 10px; color: var(--color-text-primary); font-weight: 600;">Upload Image</label>
+                        <input type="file" accept="image/*" class="create-nft-input" required style="width: 100%; padding: 15px; background: var(--color-bg-darker); border: 2px solid var(--color-border); border-radius: 12px; color: var(--color-text-primary); font-size: 16px;">
+                    </div>
+                    <button type="submit" class="btn btn--primary" style="width: 100%;">Create & List NFT</button>
+                </form>
+            </div>
+        </div>
+        <div class="subscribe__glow"></div>
+    </section>
+
+    <!-- Top Creators -->
+    <section class="influencers" style="padding: 20px 0;">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <div>
+                    <p class="section-header__subtitle">Meet the most successful creators on our platform</p>
+                    <h2 class="section-header__title" style="font-size: 36px; text-transform: capitalize;">Top Creators</h2>
+                </div>
+            </div>
+            <div class="influencers__grid" id="creatorsGrid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                <!-- Creator cards will be populated here -->
+            </div>
+        </div>
+        <div class="influencers__glow influencers__glow--1"></div>
+        <div class="influencers__glow influencers__glow--2"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__main">
+                    <div class="footer__brand">
+                        <div class="footer__logo logo">
+                            <div class="logo__icon"></div>
+                            <span class="logo__text">SHINAMI</span>
+                        </div>
+                        <p class="footer__description">
+                            Shihami is the world's leading NFTs marketplace where you can discover, sell and bid NFTs and get rich
+                        </p>
+                        <div class="footer__social social">
+                            <a href="#" class="social__link">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social__link">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="footer__copyright">All rights reserved @Faizansayani</p>
+                    </div>
+                    <nav class="footer__nav">
+                        <div class="footer__nav-col">
+                            <h3 class="footer__nav-title">About</h3>
+                            <ul class="footer__nav-list">
+                                <li><a href="#" class="footer__nav-link">About NFT</a></li>
+                                <li><a href="#" class="footer__nav-link">Live Auctions</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-col">
+                            <h3 class="footer__nav-title">Support</h3>
+                            <ul class="footer__nav-list">
+                                <li><a href="#" class="footer__nav-link">Help & Support</a></li>
+                                <li><a href="#" class="footer__nav-link">Item Details</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+    <script type="module">
+        import { Modals } from '../js/modals.js';
+        
+        const modals = new Modals();
+        
+        // Connect Wallet button - explicit handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const connectWalletBtn = document.querySelector('.header__actions .btn--primary');
+            if (connectWalletBtn) {
+                connectWalletBtn.style.cursor = 'pointer';
+                connectWalletBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    modals.showWalletModal();
+                });
+            }
+            
+            // User profile button
+            const userProfileBtn = document.querySelector('.header__user-btn');
+            if (userProfileBtn) {
+                userProfileBtn.style.cursor = 'pointer';
+                userProfileBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Create a profile modal
+                    const modal = modals.createModal();
+                    const modalContent = document.createElement('div');
+                    modalContent.className = 'modal-content';
+                    modalContent.style.cssText = `
+                        background: var(--color-bg-card);
+                        padding: 40px;
+                        border-radius: 20px;
+                        max-width: 500px;
+                        width: 90%;
+                        text-align: center;
+                        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                    `;
+                    
+                    modalContent.innerHTML = `
+                        <h2 style="color: var(--color-text-primary); margin-bottom: 20px; font-size: 28px;">👤 User Profile</h2>
+                        <div style="margin-bottom: 30px;">
+                            <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 48px;">👤</div>
+                            <h3 style="color: var(--color-text-primary); margin-bottom: 10px;">Guest User</h3>
+                            <p style="color: var(--color-text-secondary); margin-bottom: 20px;">Connect your wallet to view your profile</p>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px;">
+                            <div style="padding: 20px; background: var(--color-bg-secondary); border-radius: 12px;">
+                                <div style="font-size: 24px; font-weight: bold; color: var(--color-primary); margin-bottom: 5px;">0</div>
+                                <div style="color: var(--color-text-secondary); font-size: 14px;">NFTs Owned</div>
+                            </div>
+                            <div style="padding: 20px; background: var(--color-bg-secondary); border-radius: 12px;">
+                                <div style="font-size: 24px; font-weight: bold; color: var(--color-primary); margin-bottom: 5px;">0</div>
+                                <div style="color: var(--color-text-secondary); font-size: 14px;">Collections</div>
+                            </div>
+                        </div>
+                        <button class="btn btn--primary" style="width: 100%; padding: 15px; font-size: 16px; margin-top: 20px;" onclick="this.closest('.modal').remove()">Close</button>
+                    `;
+                    
+                    modal.appendChild(modalContent);
+                    document.body.appendChild(modal);
+                    
+                    // Close on background click
+                    modal.addEventListener('click', function(e) {
+                        if (e.target === modal) {
+                            modal.remove();
+                        }
+                    });
+                });
+            }
+        });
+        
+        // Creators page specific functionality
+        const creatorsData = [
+            { name: 'John Smith', username: '@Jsmith', sales: '1.2K', volume: '$450K', nfts: 156 },
+            { name: 'Sarah Johnson', username: '@SJohnson', sales: '890', volume: '$320K', nfts: 98 },
+            { name: 'Mike Chen', username: '@MChen', sales: '2.1K', volume: '$780K', nfts: 234 },
+            { name: 'Emma Wilson', username: '@EWilson', sales: '1.5K', volume: '$560K', nfts: 187 },
+            { name: 'David Brown', username: '@DBrown', sales: '950', volume: '$380K', nfts: 112 },
+            { name: 'Lisa Anderson', username: '@LAnderson', sales: '1.8K', volume: '$670K', nfts: 201 },
+            { name: 'Tom Martinez', username: '@TMartinez', sales: '1.1K', volume: '$420K', nfts: 145 },
+            { name: 'Anna Taylor', username: '@ATaylor', sales: '2.3K', volume: '$890K', nfts: 267 }
+        ];
+
+        function renderCreators() {
+            const grid = document.getElementById('creatorsGrid');
+            grid.innerHTML = creatorsData.map(creator => `
+                <div class="influencer-card">
+                    <div class="influencer-card__images">
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                        <div class="influencer-card__image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    </div>
+                    <div class="influencer-card__avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                    <div class="influencer-card__info">
+                        <div class="influencer-card__content">
+                            <h3 class="influencer-card__name">${creator.name}</h3>
+                            <p class="influencer-card__username">${creator.username}</p>
+                            <div style="display: flex; gap: 15px; margin-top: 10px; font-size: 12px; color: var(--color-text-secondary);">
+                                <span>${creator.sales} Sales</span>
+                                <span>${creator.volume}</span>
+                            </div>
+                        </div>
+                        <button class="btn btn--small btn--primary follow-btn">Follow</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Create NFT form
+        document.querySelector('.create-nft-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const nftName = this.querySelector('input[type="text"]').value;
+            const price = this.querySelector('input[type="number"]').value;
+            
+            if (nftName && price) {
+                alert(`🎉 NFT "${nftName}" created successfully!\nPrice: ${price} ETH\nIt will be listed on the marketplace shortly.`);
+                this.reset();
+            }
+        });
+
+        // File upload preview
+        document.querySelector('input[type="file"]')?.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    // Could show preview here
+                    console.log('Image loaded:', file.name);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Smooth scroll to create form
+        document.querySelector('a[href="#create"]')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('create')?.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Follow buttons functionality
+        function setupFollowButtons() {
+            document.querySelectorAll('.follow-btn, .influencer-card .btn--small, .influencer-card .btn--primary, .influencer-card button').forEach(btn => {
+                if (!btn.dataset.listenerAdded) {
+                    btn.dataset.listenerAdded = 'true';
+                    btn.style.cursor = 'pointer';
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const card = this.closest('.influencer-card');
+                        const creatorName = card?.querySelector('.influencer-card__name')?.textContent || 'Creator';
+                        
+                        if (this.textContent.trim() === 'Follow') {
+                            this.textContent = 'Following';
+                            this.style.background = 'transparent';
+                            this.style.border = '2px solid var(--color-primary)';
+                            this.style.color = 'var(--color-primary)';
+                            alert(`✅ You're now following ${creatorName}!\n\nYou'll receive updates about their new NFT releases.`);
+                        } else {
+                            this.textContent = 'Follow';
+                            this.style.background = 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%)';
+                            this.style.border = 'none';
+                            this.style.color = 'white';
+                            alert(`❌ You unfollowed ${creatorName}`);
+                        }
+                    });
+                }
+            });
+        }
+
+        // Initialize
+        renderCreators();
+        setTimeout(() => {
+            setupFollowButtons();
+        }, 100);
+    </script>
+</body>
+</html>
+

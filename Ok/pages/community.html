@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - SHINAMI</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preload" href="../styles.css" as="style">
+    <style>
+        @media (max-width: 1024px) {
+            .community__stats {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            .community__events {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 100px !important;
+                padding-bottom: 0px !important;
+            }
+            .section-header__title {
+                font-size: 36px !important;
+            }
+            .community__stats {
+                grid-template-columns: 1fr !important;
+            }
+            .community__events {
+                grid-template-columns: 1fr !important;
+            }
+            .community__social {
+                flex-direction: column !important;
+            }
+            .community__social .btn {
+                width: 100% !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero {
+                padding-top: 90px !important;
+                padding-bottom: 0px !important;
+            }
+            .section-header__title {
+                font-size: 28px !important;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%238B5CF6'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-weight='bold'>S</text></svg>">
+</head>
+<body class="community-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="../index.html" class="header__logo logo">
+                    <div class="logo__icon"></div>
+                    <span class="logo__text">SHINAMI</span>
+                </a>
+                <nav class="header__nav nav">
+                    <a href="../index.html" class="nav__link">Home</a>
+                    <a href="about.html" class="nav__link">About</a>
+                    <a href="creators.html" class="nav__link">Creators</a>
+                    <a href="community.html" class="nav__link nav__link--active">Community</a>
+                </nav>
+                <div class="header__actions">
+                    <button class="btn btn--primary">Connect Wallet</button>
+                    <button class="header__user-btn user-btn">
+                        <span class="user-btn__icon">👤</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Community Hero -->
+    <section class="hero" style="padding-top: 120px; padding-bottom: 0px; min-height: auto;">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <div>
+                    <h1 class="section-header__title" style="font-size: 48px; margin-bottom: 15px; text-transform: capitalize;">Join Our Community</h1>
+                    <p class="section-header__subtitle">Connect with creators, collectors, and NFT enthusiasts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Stats -->
+    <section class="wallets" style="padding: 15px 0;">
+        <div class="container">
+            <div class="community__stats" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 20px;">
+                <div class="stat-card" style="text-align: center; padding: 25px 20px; background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 16px;">
+                    <div style="font-size: 42px; font-weight: 800; color: var(--color-primary); margin-bottom: 8px;">50K+</div>
+                    <div style="color: var(--color-text-secondary); font-size: 14px; text-transform: capitalize;">Active Members</div>
+                </div>
+                <div class="stat-card" style="text-align: center; padding: 25px 20px; background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 16px;">
+                    <div style="font-size: 42px; font-weight: 800; color: var(--color-primary); margin-bottom: 8px;">200K+</div>
+                    <div style="color: var(--color-text-secondary); font-size: 14px; text-transform: capitalize;">NFTs Created</div>
+                </div>
+                <div class="stat-card" style="text-align: center; padding: 25px 20px; background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 16px;">
+                    <div style="font-size: 42px; font-weight: 800; color: var(--color-primary); margin-bottom: 8px;">$5M+</div>
+                    <div style="color: var(--color-text-secondary); font-size: 14px; text-transform: capitalize;">Total Volume</div>
+                </div>
+                <div class="stat-card" style="text-align: center; padding: 25px 20px; background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 16px;">
+                    <div style="font-size: 42px; font-weight: 800; color: var(--color-primary); margin-bottom: 8px;">1K+</div>
+                    <div style="color: var(--color-text-secondary); font-size: 14px; text-transform: capitalize;">Creators</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Links -->
+    <section class="subscribe" style="padding: 15px 0;">
+        <div class="container">
+            <div class="subscribe__content">
+                <h2 class="subscribe__title" style="text-transform: capitalize; text-align: center;">Connect With Us</h2>
+                <div class="community__social" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+                    <a href="https://discord.gg" target="_blank" class="btn btn--primary" style="min-width: 200px;">
+                        <span style="margin-right: 10px;">💬</span> Discord
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="btn btn--primary" style="min-width: 200px;">
+                        <span style="margin-right: 10px;">🐦</span> Twitter
+                    </a>
+                    <a href="https://telegram.org" target="_blank" class="btn btn--primary" style="min-width: 200px;">
+                        <span style="margin-right: 10px;">✈️</span> Telegram
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="btn btn--primary" style="min-width: 200px;">
+                        <span style="margin-right: 10px;">📷</span> Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="subscribe__glow"></div>
+    </section>
+
+    <!-- Events & News -->
+    <section class="trending" style="padding: 20px 0;">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <div>
+                    <p class="section-header__subtitle">Stay updated with latest events and news</p>
+                    <h2 class="section-header__title" style="text-transform: capitalize; font-size: 36px;">Events & News</h2>
+                </div>
+            </div>
+            <div class="community__events" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px;">
+                <div class="event-card" style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 16px; padding: 25px; transition: all 0.3s; cursor: pointer;">
+                    <div style="font-size: 14px; color: var(--color-primary); margin-bottom: 12px;">📅 Dec 27, 2024</div>
+                    <h3 style="font-size: 20px; margin-bottom: 12px; color: var(--color-text-primary); text-transform: capitalize;">NFT Drop Event</h3>
+                    <p style="color: var(--color-text-secondary); margin-bottom: 15px; font-size: 14px;">Join us for an exclusive NFT drop featuring top creators</p>
+                    <button class="btn btn--outline event-btn" style="width: 100%;" data-event="NFT Drop Event">Learn More</button>
+                </div>
+                <div class="event-card" style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 16px; padding: 25px; transition: all 0.3s; cursor: pointer;">
+                    <div style="font-size: 14px; color: var(--color-primary); margin-bottom: 12px;">📅 Jan 5, 2025</div>
+                    <h3 style="font-size: 20px; margin-bottom: 12px; color: var(--color-text-primary); text-transform: capitalize;">Creator Workshop</h3>
+                    <p style="color: var(--color-text-secondary); margin-bottom: 15px; font-size: 14px;">Learn how to create and sell NFTs from industry experts</p>
+                    <button class="btn btn--outline event-btn" style="width: 100%;" data-event="Creator Workshop">Register</button>
+                </div>
+                <div class="event-card" style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 16px; padding: 25px; transition: all 0.3s; cursor: pointer;">
+                    <div style="font-size: 14px; color: var(--color-primary); margin-bottom: 12px;">📅 Jan 15, 2025</div>
+                    <h3 style="font-size: 20px; margin-bottom: 12px; color: var(--color-text-primary); text-transform: capitalize;">Auction Live</h3>
+                    <p style="color: var(--color-text-secondary); margin-bottom: 15px; font-size: 14px;">Participate in our monthly live auction event</p>
+                    <button class="btn btn--outline event-btn" style="width: 100%;" data-event="Auction Live">Join Auction</button>
+                </div>
+            </div>
+        </div>
+        <div class="trending__glow trending__glow--1"></div>
+        <div class="trending__glow trending__glow--2"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__main">
+                    <div class="footer__brand">
+                        <div class="footer__logo logo">
+                            <div class="logo__icon"></div>
+                            <span class="logo__text">SHINAMI</span>
+                        </div>
+                        <p class="footer__description">
+                            Shihami is the world's leading NFTs marketplace where you can discover, sell and bid NFTs and get rich
+                        </p>
+                        <div class="footer__social social">
+                            <a href="#" class="social__link">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social__link">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="footer__copyright">All rights reserved @Faizansayani</p>
+                    </div>
+                    <nav class="footer__nav">
+                        <div class="footer__nav-col">
+                            <h3 class="footer__nav-title">About</h3>
+                            <ul class="footer__nav-list">
+                                <li><a href="#" class="footer__nav-link">About NFT</a></li>
+                                <li><a href="#" class="footer__nav-link">Live Auctions</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-col">
+                            <h3 class="footer__nav-title">Support</h3>
+                            <ul class="footer__nav-list">
+                                <li><a href="#" class="footer__nav-link">Help & Support</a></li>
+                                <li><a href="#" class="footer__nav-link">Item Details</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+    <script type="module">
+        import { Modals } from '../js/modals.js';
+        
+        const modals = new Modals();
+        
+        // Connect Wallet button - explicit handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const connectWalletBtn = document.querySelector('.header__actions .btn--primary');
+            if (connectWalletBtn && !connectWalletBtn.href) { // Only if it's a button, not a link
+                connectWalletBtn.style.cursor = 'pointer';
+                connectWalletBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    modals.showWalletModal();
+                });
+            }
+            
+            // User profile button
+            const userProfileBtn = document.querySelector('.header__user-btn');
+            if (userProfileBtn) {
+                userProfileBtn.style.cursor = 'pointer';
+                userProfileBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Create a profile modal
+                    const modal = modals.createModal();
+                    const modalContent = document.createElement('div');
+                    modalContent.className = 'modal-content';
+                    modalContent.style.cssText = `
+                        background: var(--color-bg-card);
+                        padding: 40px;
+                        border-radius: 20px;
+                        max-width: 500px;
+                        width: 90%;
+                        text-align: center;
+                        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                    `;
+                    
+                    modalContent.innerHTML = `
+                        <h2 style="color: var(--color-text-primary); margin-bottom: 20px; font-size: 28px;">👤 User Profile</h2>
+                        <div style="margin-bottom: 30px;">
+                            <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 48px;">👤</div>
+                            <h3 style="color: var(--color-text-primary); margin-bottom: 10px;">Guest User</h3>
+                            <p style="color: var(--color-text-secondary); margin-bottom: 20px;">Connect your wallet to view your profile</p>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px;">
+                            <div style="padding: 20px; background: var(--color-bg-secondary); border-radius: 12px;">
+                                <div style="font-size: 24px; font-weight: bold; color: var(--color-primary); margin-bottom: 5px;">0</div>
+                                <div style="color: var(--color-text-secondary); font-size: 14px;">NFTs Owned</div>
+                            </div>
+                            <div style="padding: 20px; background: var(--color-bg-secondary); border-radius: 12px;">
+                                <div style="font-size: 24px; font-weight: bold; color: var(--color-primary); margin-bottom: 5px;">0</div>
+                                <div style="color: var(--color-text-secondary); font-size: 14px;">Collections</div>
+                            </div>
+                        </div>
+                        <button class="btn btn--primary" style="width: 100%; padding: 15px; font-size: 16px; margin-top: 20px;" onclick="this.closest('.modal').remove()">Close</button>
+                    `;
+                    
+                    modal.appendChild(modalContent);
+                    document.body.appendChild(modal);
+                    
+                    // Close on background click
+                    modal.addEventListener('click', function(e) {
+                        if (e.target === modal) {
+                            modal.remove();
+                        }
+                    });
+                });
+            }
+        });
+        
+        // Community page functionality
+        document.querySelectorAll('.event-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+                this.style.borderColor = 'var(--color-primary)';
+                this.style.boxShadow = '0 20px 40px rgba(139, 92, 246, 0.3)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.borderColor = 'var(--color-border)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        document.querySelectorAll('.event-card .btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const eventTitle = this.closest('.event-card').querySelector('h3').textContent;
+                alert(`🎉 You've registered for: ${eventTitle}`);
+            });
+        });
+    </script>
+</body>
+</html>
+
